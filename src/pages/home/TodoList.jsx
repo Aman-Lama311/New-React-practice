@@ -6,6 +6,10 @@ const [input, setInput] = useState('');
 
 const handleSubmit = (e) => {
   e.preventDefault();
+  if(!input.trim()){
+    alert('Please Enter Something');
+    return;
+  }
   setTodo([...todo, input]);
   setInput('');
 }
